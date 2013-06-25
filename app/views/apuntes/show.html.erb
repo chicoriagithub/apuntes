@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @apunte.titulo %>
+</p>
+
+<p>
+  <b>Contenido:</b>
+  <%= @apunte.contenido %>
+</p>
+
+
+<%= link_to 'Edit', edit_apunte_path(@apunte) %> |
+<%= link_to 'Back', apuntes_path %>

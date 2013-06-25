@@ -1,0 +1,25 @@
+<h1>Listing apuntes</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Contenido</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apuntes.each do |apunte| %>
+  <tr>
+    <td><%= apunte.titulo %></td>
+    <td><%= apunte.contenido %></td>
+    <td><%= link_to 'Show', apunte %></td>
+    <td><%= link_to 'Edit', edit_apunte_path(apunte) %></td>
+    <td><%= link_to 'Destroy', apunte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apunte', new_apunte_path %>

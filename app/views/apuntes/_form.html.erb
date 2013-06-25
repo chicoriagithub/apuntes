@@ -1,0 +1,25 @@
+<%= form_for(@apunte) do |f| %>
+  <% if @apunte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apunte.errors.count, "error") %> prohibited this apunte from being saved:</h2>
+
+      <ul>
+      <% @apunte.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :contenido %><br />
+    <%= f.text_field :contenido %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
